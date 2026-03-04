@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Sachin P – Aspiring Full-Stack Web Developer skilled in MERN Stack. Portfolio showcasing projects, skills, and experience." />
+  <title>Sachin P | Full-Stack Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <!-- EmailJS SDK -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body>
+
+  <!-- Animated Background -->
+  <div class="bg-canvas" id="bgCanvas"></div>
+  <div class="noise-overlay"></div>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>
+        <span class="logo-name">Sachin</span>
+        <span class="logo-bracket">/&gt;</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <a href="#contact" class="nav-cta">Hire Me</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Available for Internship
+      </div>
+      <h1 class="hero-title">
+        <span class="title-line">Hi, I'm</span>
+        <span class="title-name gradient-text">Sachin P</span>
+        <span class="title-role typing-wrap">
+          <span class="typing" id="typingText"></span>
+          <span class="cursor">|</span>
+        </span>
+      </h1>
+      <p class="hero-desc">
+        Aspiring Full-Stack Developer passionate about building real-world applications with the <strong>MERN
+          stack</strong>. I craft clean, scalable, and impactful digital experiences.
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">
+          <i class="fas fa-rocket"></i> View My Work
+        </a>
+        <a href="#contact" class="btn btn-ghost">
+          <i class="fas fa-paper-plane"></i> Get In Touch
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-num">200+</span>
+          <span class="stat-label">LeetCode Problems</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">3+</span>
+          <span class="stat-label">Projects Built</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">8.4</span>
+          <span class="stat-label">CGPA</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hex-scene">
+
+        <!-- Background orbit ring -->
+        <div class="hex-orbit"></div>
+        <div class="hex-orbit hex-orbit-2"></div>
+
+        <!-- Hexagonal photo frame -->
+        <div class="hex-frame-wrap">
+          <div class="hex-shimmer"></div>
+          <div class="hex-frame">
+            <img src="profile.jpg" alt="Sachin P" class="hex-photo" />
+          </div>
+        </div>
+
+        <!-- Floating code snippets -->
+        <div class="code-chip chip-1"><span class="code-kw">const</span> dev <span class="code-op">=</span> <span
+            class="code-str">"Sachin"</span></div>
+        <div class="code-chip chip-2"><span class="code-kw">await</span> hire<span class="code-op">()</span></div>
+        <div class="code-chip chip-3"><span class="code-tag">&lt;MERN /&gt;</span></div>
+        <div class="code-chip chip-4"><span class="code-kw">git push</span> 🚀</div>
+
+        <!-- Skill dots -->
+        <div class="hex-dot dot-react"><i class="fab fa-react"></i></div>
+        <div class="hex-dot dot-node"><i class="fab fa-node-js"></i></div>
+        <div class="hex-dot dot-mongo"><i class="fas fa-database"></i></div>
+        <div class="hex-dot dot-js"><i class="fab fa-js"></i></div>
+
+        <!-- Status pill -->
+        <div class="hex-status">
+          <span class="status-led"></span> Open to Work
+        </div>
+
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <span>Scroll Down</span>
+      <div class="scroll-arrow">
+        <i class="fas fa-chevron-down"></i>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">About Me</span>
+        <h2 class="section-title">Who Am I?</h2>
+        <p class="section-subtitle">A passionate developer building the future, one line of code at a time.</p>
+      </div>
+      <div class="about-grid">
+        <div class="about-card glass-card reveal">
+          <div class="about-icon-wrap">
+            <i class="fas fa-user-graduate"></i>
+          </div>
+          <h3>Education</h3>
+          <div class="edu-timeline">
+            <div class="edu-item">
+              <div class="edu-dot"></div>
+              <div class="edu-content">
+                <h4>B.E. – Computer Science & Engineering (Cyber Security)</h4>
+                <p class="edu-inst">Muthayammal Engineering College</p>
+                <div class="edu-meta">
+                  <span class="edu-year">2023 – 2027</span>
+                  <span class="edu-grade grade-highlight">CGPA: 8.4</span>
+                </div>
+              </div>
+            </div>
+            <div class="edu-item">
+              <div class="edu-dot"></div>
+              <div class="edu-content">
+                <h4>Higher Secondary (HSC)</h4>
+                <p class="edu-inst">Government Higher Secondary School, Keeripatty</p>
+                <div class="edu-meta">
+                  <span class="edu-year">2021 – 2023</span>
+                  <span class="edu-grade">76.5%</span>
+                </div>
+              </div>
+            </div>
+            <div class="edu-item">
+              <div class="edu-dot"></div>
+              <div class="edu-content">
+                <h4>SSLC (10th)</h4>
+                <p class="edu-inst">Holy Mother Matriculation School</p>
+                <div class="edu-meta">
+                  <span class="edu-year">2020 – 2021</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="about-card glass-card reveal">
+          <div class="about-icon-wrap">
+            <i class="fas fa-code"></i>
+          </div>
+          <h3>Quick Info</h3>
+          <div class="info-list">
+            <div class="info-row">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Salem, Tamil Nadu, India</span>
+            </div>
+            <div class="info-row">
+              <i class="fas fa-envelope"></i>
+              <a href="mailto:sachinabi67@gmail.com">sachinabi67@gmail.com</a>
+            </div>
+            <div class="info-row">
+              <i class="fas fa-phone"></i>
+              <a href="tel:+919342423515">+91 93424 23515</a>
+            </div>
+            <div class="info-row">
+              <i class="fab fa-linkedin"></i>
+              <a href="https://www.linkedin.com/in/sachin-p-1787242a5" target="_blank">sachin-p-1787242a5</a>
+            </div>
+            <div class="info-row">
+              <i class="fab fa-github"></i>
+              <a href="https://github.com/SACHIN-P45" target="_blank">SACHIN-P45</a>
+            </div>
+            <div class="info-row">
+              <i class="fas fa-puzzle-piece"></i>
+              <span>200+ LeetCode Problems (Java)</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-card glass-card reveal">
+          <div class="about-icon-wrap">
+            <i class="fas fa-certificate"></i>
+          </div>
+          <h3>Certifications</h3>
+          <div class="cert-list">
+            <div class="cert-item">
+              <div class="cert-icon"><i class="fas fa-award"></i></div>
+              <div class="cert-info">
+                <h4>NPTEL – Distributed Systems</h4>
+                <p>National Programme on Technology Enhanced Learning</p>
+              </div>
+            </div>
+            <div class="cert-item">
+              <div class="cert-icon"><i class="fas fa-trophy"></i></div>
+              <div class="cert-info">
+                <h4>TCS ION Career Edge</h4>
+                <p>Young Professional Certification</p>
+              </div>
+            </div>
+          </div>
+          <div class="leetcode-box">
+            <div class="lc-top">
+              <i class="fas fa-fire lc-fire"></i>
+              <span>Problem Solving</span>
+            </div>
+            <div class="lc-count">200+</div>
+            <div class="lc-label">LeetCode Problems Solved in Java</div>
+            <div class="lc-bar-wrap">
+              <div class="lc-bar" style="width: 0%" data-width="75%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="section section-dark" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Technical Skills</span>
+        <h2 class="section-title">My Tech Stack</h2>
+        <p class="section-subtitle">Technologies I work with to build modern web applications.</p>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-category glass-card reveal">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon"><i class="fas fa-code"></i></div>
+            <h3>Languages</h3>
+          </div>
+          <div class="skill-tags">
+            <div class="skill-tag"><i class="fab fa-python"></i> Python</div>
+            <div class="skill-tag"><i class="fab fa-js"></i> JavaScript</div>
+            <div class="skill-tag"><i class="fab fa-java"></i> Java</div>
+            <div class="skill-tag"><i class="fas fa-copyright"></i> C</div>
+          </div>
+        </div>
+        <div class="skill-category glass-card reveal">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon"><i class="fas fa-layer-group"></i></div>
+            <h3>Frameworks</h3>
+          </div>
+          <div class="skill-tags">
+            <div class="skill-tag react"><i class="fab fa-react"></i> React.js</div>
+            <div class="skill-tag node"><i class="fab fa-node-js"></i> Node.js</div>
+            <div class="skill-tag"><i class="fas fa-server"></i> Express.js</div>
+            <div class="skill-tag"><i class="fab fa-bootstrap"></i> Bootstrap</div>
+          </div>
+        </div>
+        <div class="skill-category glass-card reveal">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon"><i class="fas fa-tools"></i></div>
+            <h3>Tools & Tech</h3>
+          </div>
+          <div class="skill-tags">
+            <div class="skill-tag"><i class="fab fa-git-alt"></i> Git</div>
+            <div class="skill-tag"><i class="fas fa-leaf"></i> MongoDB</div>
+            <div class="skill-tag"><i class="fas fa-vial"></i> Postman</div>
+            <div class="skill-tag"><i class="fas fa-brain"></i> ChatGPT</div>
+            <div class="skill-tag"><i class="fas fa-book"></i> Jupyter</div>
+          </div>
+        </div>
+        <div class="skill-category glass-card reveal">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon"><i class="fas fa-star"></i></div>
+            <h3>Others</h3>
+          </div>
+          <div class="skill-tags">
+            <div class="skill-tag"><i class="fas fa-shield-alt"></i> JWT Auth</div>
+            <div class="skill-tag"><i class="fas fa-exchange-alt"></i> REST API</div>
+            <div class="skill-tag"><i class="fas fa-robot"></i> Model Deploy</div>
+            <div class="skill-tag"><i class="fas fa-mobile-alt"></i> Responsive</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tech Progress Bars -->
+      <div class="tech-bars-wrap reveal">
+        <h3 class="tech-bars-title">Proficiency</h3>
+        <div class="tech-bars">
+          <div class="tech-bar-item">
+            <div class="tb-info">
+              <span>JavaScript / React</span>
+              <span class="tb-pct">85%</span>
+            </div>
+            <div class="tb-track">
+              <div class="tb-fill" data-width="85%"></div>
+            </div>
+          </div>
+          <div class="tech-bar-item">
+            <div class="tb-info">
+              <span>Node.js / Express</span>
+              <span class="tb-pct">80%</span>
+            </div>
+            <div class="tb-track">
+              <div class="tb-fill" data-width="80%"></div>
+            </div>
+          </div>
+          <div class="tech-bar-item">
+            <div class="tb-info">
+              <span>MongoDB</span>
+              <span class="tb-pct">78%</span>
+            </div>
+            <div class="tb-track">
+              <div class="tb-fill" data-width="78%"></div>
+            </div>
+          </div>
+          <div class="tech-bar-item">
+            <div class="tb-info">
+              <span>Java / DSA</span>
+              <span class="tb-pct">75%</span>
+            </div>
+            <div class="tb-track">
+              <div class="tb-fill" data-width="75%"></div>
+            </div>
+          </div>
+          <div class="tech-bar-item">
+            <div class="tb-info">
+              <span>Python</span>
+              <span class="tb-pct">70%</span>
+            </div>
+            <div class="tb-track">
+              <div class="tb-fill" data-width="70%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Portfolio</span>
+        <h2 class="section-title">Featured Projects</h2>
+        <p class="section-subtitle">Real-world applications built with modern technologies.</p>
+      </div>
+      <div class="projects-grid">
+
+        <!-- EventHub -->
+        <div class="project-card glass-card reveal" data-project="eventhub">
+          <div class="project-header">
+            <div class="project-icon-wrap" style="--clr:#6366f1">
+              <i class="fas fa-calendar-star"></i>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/SACHIN-P45/EventHub" target="_blank" class="proj-link" title="GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+          </div>
+          <h3 class="proj-title">EventHub</h3>
+          <p class="proj-desc">A full-stack college event management platform with role-based access, real-time chat,
+            QR-code ticketing, and admin analytics dashboard.</p>
+          <ul class="proj-features">
+            <li><i class="fas fa-check-circle"></i> Role-based access control</li>
+            <li><i class="fas fa-check-circle"></i> Real-time chat via Socket.IO</li>
+            <li><i class="fas fa-check-circle"></i> QR-code ticketing system</li>
+            <li><i class="fas fa-check-circle"></i> JWT Auth & email notifications</li>
+          </ul>
+          <div class="proj-stack">
+            <span class="stack-tag">MongoDB</span>
+            <span class="stack-tag">Express</span>
+            <span class="stack-tag">React</span>
+            <span class="stack-tag">Node</span>
+            <span class="stack-tag">Redux</span>
+            <span class="stack-tag">Socket.IO</span>
+            <span class="stack-tag">Tailwind</span>
+            <span class="stack-tag">MUI</span>
+          </div>
+          <div class="proj-year">2025</div>
+        </div>
+
+        <!-- Complaint Management System -->
+        <div class="project-card glass-card reveal" data-project="cms">
+          <div class="project-header">
+            <div class="project-icon-wrap" style="--clr:#3b82f6">
+              <i class="fas fa-headset"></i>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/SACHIN-P45/Compilant_Management_System_Springboot" target="_blank"
+                class="proj-link" title="GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+          </div>
+          <h3 class="proj-title">Complaint Management System</h3>
+          <p class="proj-desc">A comprehensive full-stack complaint management system featuring real-time tracking, an
+            admin dashboard, OAuth2 integration, and automated Discord notifications.</p>
+          <ul class="proj-features">
+            <li><i class="fas fa-check-circle"></i> Student complaint tracking</li>
+            <li><i class="fas fa-check-circle"></i> Admin dashboard for management</li>
+            <li><i class="fas fa-check-circle"></i> Automated Discord notifications</li>
+            <li><i class="fas fa-check-circle"></i> Spring Security & OAuth2 Auth</li>
+          </ul>
+          <div class="proj-stack">
+            <span class="stack-tag">React</span>
+            <span class="stack-tag">Spring Boot</span>
+            <span class="stack-tag">MongoDB</span>
+            <span class="stack-tag">Java</span>
+            <span class="stack-tag">Discord JDA</span>
+            <span class="stack-tag">Tailwind</span>
+          </div>
+          <div class="proj-year">2025</div>
+        </div>
+
+        <!-- Quiz App -->
+        <div class="project-card glass-card reveal" data-project="quiz">
+          <div class="project-header">
+            <div class="project-icon-wrap" style="--clr:#f59e0b">
+              <i class="fas fa-question-circle"></i>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/SACHIN-P45/Quiz_app" target="_blank" class="proj-link" title="GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+          </div>
+          <h3 class="proj-title">Quiz App</h3>
+          <p class="proj-desc">A full-stack quiz application with user authentication, real-time scoring, and admin
+            panel for managing quiz content with a seamless, clean UI.</p>
+          <ul class="proj-features">
+            <li><i class="fas fa-check-circle"></i> Secure user authentication</li>
+            <li><i class="fas fa-check-circle"></i> Real-time quiz scoring</li>
+            <li><i class="fas fa-check-circle"></i> Admin quiz management panel</li>
+            <li><i class="fas fa-check-circle"></i> Clean responsive UI</li>
+          </ul>
+          <div class="proj-stack">
+            <span class="stack-tag">MongoDB</span>
+            <span class="stack-tag">Express</span>
+            <span class="stack-tag">React</span>
+            <span class="stack-tag">Node</span>
+          </div>
+          <div class="proj-year">2025</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section class="section section-dark" id="experience">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Experience</span>
+        <h2 class="section-title">Work Experience</h2>
+        <p class="section-subtitle">Professional journey and hands-on contributions.</p>
+      </div>
+      <div class="exp-timeline">
+        <div class="exp-card glass-card reveal">
+          <div class="exp-header">
+            <div class="exp-company-logo">
+              <i class="fas fa-snowflake"></i>
+            </div>
+            <div class="exp-info">
+              <h3>ServiceNow Virtual Intern</h3>
+              <p class="exp-company">ServiceNow</p>
+              <span class="exp-date"><i class="fas fa-calendar"></i> June 2025 – July 2025</span>
+            </div>
+            <span class="exp-badge">Internship</span>
+          </div>
+          <div class="exp-body">
+            <ul class="exp-points">
+              <li><i class="fas fa-arrow-right"></i>Gained hands-on experience with the ServiceNow platform including
+                Incident Management, Change Management, and Service Catalog.</li>
+              <li><i class="fas fa-arrow-right"></i>Customized workflows using ServiceNow Studio and Flow Designer for
+                real-time ITSM environments.</li>
+              <li><i class="fas fa-arrow-right"></i>Created and managed forms, tables, and business rules in a live IT
+                service environment.</li>
+              <li><i class="fas fa-arrow-right"></i>Automated IT service processes to improve request handling
+                efficiency.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Contact</span>
+        <h2 class="section-title">Let's Connect</h2>
+        <p class="section-subtitle">Open to internships, collaborations, and exciting opportunities.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <h3>Get In Touch</h3>
+          <p>I'm currently looking for internship opportunities. Whether you have a question or just want to say hi, my
+            inbox is always open!</p>
+          <div class="contact-links">
+            <a href="mailto:sachinabi67@gmail.com" class="contact-link">
+              <div class="clink-icon"><i class="fas fa-envelope"></i></div>
+              <div>
+                <span class="clink-label">Email</span>
+                <span class="clink-val">sachinabi67@gmail.com</span>
+              </div>
+            </a>
+            <a href="tel:+919342423515" class="contact-link">
+              <div class="clink-icon"><i class="fas fa-phone"></i></div>
+              <div>
+                <span class="clink-label">Phone</span>
+                <span class="clink-val">+91 93424 23515</span>
+              </div>
+            </a>
+            <a href="https://www.linkedin.com/in/sachin-p-1787242a5" target="_blank" class="contact-link">
+              <div class="clink-icon"><i class="fab fa-linkedin"></i></div>
+              <div>
+                <span class="clink-label">LinkedIn</span>
+                <span class="clink-val">sachin-p-1787242a5</span>
+              </div>
+            </a>
+            <a href="https://github.com/SACHIN-P45" target="_blank" class="contact-link">
+              <div class="clink-icon"><i class="fab fa-github"></i></div>
+              <div>
+                <span class="clink-label">GitHub</span>
+                <span class="clink-val">SACHIN-P45</span>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="contact-form-wrap reveal">
+          <form class="contact-form glass-card" id="contactForm">
+            <div class="form-group">
+              <label for="contactName">Your Name</label>
+              <input type="text" id="contactName" name="name" placeholder="John Doe" required />
+            </div>
+            <div class="form-group">
+              <label for="contactEmail">Your Email</label>
+              <input type="email" id="contactEmail" name="email" placeholder="john@example.com" required />
+            </div>
+            <div class="form-group">
+              <label for="contactSubject">Subject</label>
+              <input type="text" id="contactSubject" name="title" placeholder="Internship Opportunity" required />
+            </div>
+            <div class="form-group">
+              <label for="contactMessage">Message</label>
+              <textarea id="contactMessage" name="message" rows="5" placeholder="Tell me about the opportunity..."
+                required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <a href="#home" class="nav-logo">
+          <span class="logo-bracket">&lt;</span>
+          <span class="logo-name">Sachin</span>
+          <span class="logo-bracket">/&gt;</span>
+        </a>
+        <p>Full-Stack Developer | MERN Stack | Salem, India</p>
+        <div class="footer-socials">
+          <a href="https://github.com/SACHIN-P45" target="_blank" class="social-icon" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/sachin-p-1787242a5" target="_blank" class="social-icon"
+            aria-label="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="mailto:sachinabi67@gmail.com" class="social-icon" aria-label="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+          <a href="tel:+919342423515" class="social-icon" aria-label="Phone">
+            <i class="fas fa-phone"></i>
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Sachin P. Crafted with <i class="fas fa-heart" style="color:#f43f5e"></i> & passion.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast">
+    <i class="fas fa-check-circle"></i>
+    <span id="toastMsg">Message sent successfully!</span>
+  </div>
+
+  <!-- EmailJS Init -->
+  <script type="text/javascript">
+    (function () {
+      emailjs.init('Hc3qm5pkpS9zH-iI-'); // ✅ Public Key
+    })();
+  </script>
+  <script src="script.js"></script>
+</body>
+
+</html>
