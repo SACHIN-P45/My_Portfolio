@@ -4,6 +4,42 @@
 
 'use strict';
 
+// ── Preloader ─────────────────────────────────────────
+const loaderProgressBar = document.getElementById('loaderProgressBar');
+const loaderPercentage = document.getElementById('loaderPercentage');
+const preloader = document.getElementById('preloader');
+
+let loadProgress = 0;
+const fakeLoadInterval = setInterval(() => {
+    loadProgress += Math.random() * 8 + 2;
+    if (loadProgress >= 90) {
+        loadProgress = 90;
+    }
+    updateLoader(loadProgress);
+}, 60);
+
+function updateLoader(val) {
+    if (loaderProgressBar) loaderProgressBar.style.width = `${val}%`;
+    if (loaderPercentage) loaderPercentage.textContent = `${Math.floor(val)}%`;
+}
+
+window.addEventListener('load', () => {
+    clearInterval(fakeLoadInterval);
+    if (!preloader) return;
+    
+    updateLoader(100);
+    preloader.classList.add('loading-complete');
+    
+    setTimeout(() => {
+        preloader.classList.add('fade-out');
+        setTimeout(() => {
+            if (preloader.parentNode) {
+                preloader.parentNode.removeChild(preloader);
+            }
+        }, 600);
+    }, 450);
+});
+
 // ── Typing Animation ─────────────────────────────────
 const typingStrings = [
     'Full-Stack Developer',

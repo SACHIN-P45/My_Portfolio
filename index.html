@@ -20,6 +20,29 @@
 
 <body>
 
+  <!-- Preloader -->
+  <div id="preloader" class="preloader">
+    <div class="loader-wrapper">
+      <div class="orbit-loader">
+        <div class="orbit orbit-1"></div>
+        <div class="orbit orbit-2"></div>
+        <div class="orbit orbit-3"></div>
+        <div class="orbit-center">
+          <i class="fas fa-code"></i>
+        </div>
+      </div>
+      
+      <div class="loader-brand">
+        <span class="brand-code">const</span> dev <span class="brand-op">=</span> <span class="brand-name">"Sachin"</span><span class="brand-blink">;</span>
+      </div>
+      
+      <div class="loader-progress-container">
+        <div class="loader-progress-bar" id="loaderProgressBar"></div>
+      </div>
+      <div class="loader-percentage" id="loaderPercentage">0%</div>
+    </div>
+  </div>
+
   <!-- Animated Background -->
   <div class="bg-canvas" id="bgCanvas"></div>
   <div class="noise-overlay"></div>
@@ -380,7 +403,7 @@
         <div class="project-card glass-card reveal" data-project="eventhub">
           <div class="project-header">
             <div class="project-icon-wrap" style="--clr:#6366f1">
-              <i class="fas fa-calendar-star"></i>
+              <i class="fas fa-calendar-check"></i>
             </div>
             <div class="project-links">
               <a href="https://github.com/SACHIN-P45/EventHub" target="_blank" class="proj-link" title="GitHub">
@@ -443,26 +466,28 @@
           <div class="proj-year">2025</div>
         </div>
 
-        <!-- Quiz App -->
-        <div class="project-card glass-card reveal" data-project="quiz">
+        <!-- Internship Placement Portal -->
+        <div class="project-card glass-card reveal" data-project="internship-portal">
           <div class="project-header">
-            <div class="project-icon-wrap" style="--clr:#f59e0b">
-              <i class="fas fa-question-circle"></i>
+            <div class="project-icon-wrap" style="--clr:#10b981">
+              <i class="fas fa-briefcase"></i>
             </div>
             <div class="project-links">
-              <a href="https://github.com/SACHIN-P45/Quiz_app" target="_blank" class="proj-link" title="GitHub">
+              <a href="https://github.com/SACHIN-P45/Internship_Placement_Portal" target="_blank" class="proj-link" title="GitHub">
                 <i class="fab fa-github"></i>
+              </a>
+              <a href="https://internship-placement-portal-kappa.vercel.app/" target="_blank" class="proj-link" title="Live Demo">
+                <i class="fas fa-external-link-alt"></i>
               </a>
             </div>
           </div>
-          <h3 class="proj-title">Quiz App</h3>
-          <p class="proj-desc">A full-stack quiz application with user authentication, real-time scoring, and admin
-            panel for managing quiz content with a seamless, clean UI.</p>
+          <h3 class="proj-title">Internship Placement Portal</h3>
+          <p class="proj-desc">A comprehensive platform for managing internship applications, connecting students with opportunities, and providing analytics for placement heads with a premium glassmorphic UI.</p>
           <ul class="proj-features">
-            <li><i class="fas fa-check-circle"></i> Secure user authentication</li>
-            <li><i class="fas fa-check-circle"></i> Real-time quiz scoring</li>
-            <li><i class="fas fa-check-circle"></i> Admin quiz management panel</li>
-            <li><i class="fas fa-check-circle"></i> Clean responsive UI</li>
+            <li><i class="fas fa-check-circle"></i> Placement Head & Student Dashboards</li>
+            <li><i class="fas fa-check-circle"></i> Internship application tracking</li>
+            <li><i class="fas fa-check-circle"></i> Premium glassmorphic design</li>
+            <li><i class="fas fa-check-circle"></i> OAuth login & profile management</li>
           </ul>
           <div class="proj-stack">
             <span class="stack-tag">MongoDB</span>
@@ -470,7 +495,7 @@
             <span class="stack-tag">React</span>
             <span class="stack-tag">Node</span>
           </div>
-          <div class="proj-year">2025</div>
+          <div class="proj-year">2026</div>
         </div>
 
       </div>
