@@ -4,6 +4,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#030712" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <meta name="description"
     content="Sachin P – Aspiring Full-Stack Web Developer skilled in MERN Stack. Portfolio showcasing projects, skills, and experience." />
   <title>Sachin P | Full-Stack Developer</title>
@@ -13,8 +16,6 @@
     href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
-  <!-- EmailJS SDK -->
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 
@@ -61,7 +62,10 @@
         <li><a href="#skills" class="nav-link">Skills</a></li>
         <li><a href="#projects" class="nav-link">Projects</a></li>
         <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#hackathon" class="nav-link">Hackathon</a></li>
+        <li><a href="#resume" class="nav-link">Resume</a></li>
         <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li class="mobile-cta-li"><a href="#contact" class="btn btn-primary btn-full mobile-cta-btn"><i class="fas fa-paper-plane"></i> Hire Me</a></li>
       </ul>
       <a href="#contact" class="nav-cta">Hire Me</a>
       <button class="hamburger" id="hamburger" aria-label="Toggle menu">
@@ -69,13 +73,14 @@
       </button>
     </div>
   </nav>
+  <div class="nav-backdrop" id="navBackdrop"></div>
 
   <!-- Hero Section -->
   <section class="hero" id="home">
     <div class="hero-content">
       <div class="hero-badge">
         <span class="badge-dot"></span>
-        Available for Internship
+        Open to Work
       </div>
       <h1 class="hero-title">
         <span class="title-line">Hi, I'm</span>
@@ -109,7 +114,7 @@
         </div>
         <div class="stat-divider"></div>
         <div class="stat">
-          <span class="stat-num">8.4</span>
+          <span class="stat-num">8.54</span>
           <span class="stat-label">CGPA</span>
         </div>
       </div>
@@ -125,7 +130,7 @@
         <div class="hex-frame-wrap">
           <div class="hex-shimmer"></div>
           <div class="hex-frame">
-            <img src="profile.jpg" alt="Sachin P" class="hex-photo" />
+            <img src="profile.jpg" alt="Sachin P" class="hex-photo" width="210" height="210" fetchpriority="high" />
           </div>
         </div>
 
@@ -178,8 +183,7 @@
                 <h4>B.E. – Computer Science & Engineering (Cyber Security)</h4>
                 <p class="edu-inst">Muthayammal Engineering College</p>
                 <div class="edu-meta">
-                  <span class="edu-year">2023 – 2027</span>
-                  <span class="edu-grade grade-highlight">CGPA: 8.4</span>
+                  <span class="edu-grade grade-highlight">CGPA: 8.54</span>
                 </div>
               </div>
             </div>
@@ -189,7 +193,6 @@
                 <h4>Higher Secondary (HSC)</h4>
                 <p class="edu-inst">Government Higher Secondary School, Keeripatty</p>
                 <div class="edu-meta">
-                  <span class="edu-year">2021 – 2023</span>
                   <span class="edu-grade">76.5%</span>
                 </div>
               </div>
@@ -200,7 +203,6 @@
                 <h4>SSLC (10th)</h4>
                 <p class="edu-inst">Holy Mother Matriculation School</p>
                 <div class="edu-meta">
-                  <span class="edu-year">2020 – 2021</span>
                 </div>
               </div>
             </div>
@@ -245,30 +247,98 @@
           <h3>Certifications</h3>
           <div class="cert-list">
             <div class="cert-item">
-              <div class="cert-icon"><i class="fas fa-award"></i></div>
+              <div class="cert-icon"><i class="fas fa-network-wired"></i></div>
               <div class="cert-info">
-                <h4>NPTEL – Distributed Systems</h4>
-                <p>National Programme on Technology Enhanced Learning</p>
+                <div class="cert-header">
+                  <h4>Distributed Systems</h4>
+                  <span class="cert-badge elite-badge"><i class="fas fa-medal"></i> Elite 73%</span>
+                </div>
+                <p>NPTEL · IIT Kanpur</p>
               </div>
+              <a href="certificates/NPTEL_Distributed_Systems.pdf" target="_blank" class="cert-link" title="View Certificate">
+                <i class="fas fa-external-link-alt"></i>
+              </a>
             </div>
+
+            <div class="cert-item">
+              <div class="cert-icon"><i class="fas fa-microchip"></i></div>
+              <div class="cert-info">
+                <div class="cert-header">
+                  <h4>Edge Computing</h4>
+                  <span class="cert-badge elite-badge"><i class="fas fa-medal"></i> Elite 70%</span>
+                </div>
+                <p>NPTEL · IIT Kanpur</p>
+              </div>
+              <a href="certificates/NPTEL_Edge_Computing.pdf" target="_blank" class="cert-link" title="View Certificate">
+                <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+
+            <div class="cert-item">
+              <div class="cert-icon"><i class="fas fa-user-shield"></i></div>
+              <div class="cert-info">
+                <div class="cert-header">
+                  <h4>Privacy &amp; Security in Online Social Media</h4>
+                  <span class="cert-badge elite-badge"><i class="fas fa-medal"></i> Elite 66%</span>
+                </div>
+                <p>NPTEL · IIIT Hyderabad</p>
+              </div>
+              <a href="certificates/NPTEL_Privacy_and_Security.pdf" target="_blank" class="cert-link" title="View Certificate">
+                <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+
             <div class="cert-item">
               <div class="cert-icon"><i class="fas fa-trophy"></i></div>
               <div class="cert-info">
-                <h4>TCS ION Career Edge</h4>
+                <div class="cert-header">
+                  <h4>TCS ION Career Edge</h4>
+                </div>
                 <p>Young Professional Certification</p>
               </div>
             </div>
           </div>
-          <div class="leetcode-box">
-            <div class="lc-top">
-              <i class="fas fa-fire lc-fire"></i>
-              <span>Problem Solving</span>
+        </div>
+      </div>
+
+      <!-- LeetCode & Problem Solving Dedicated Spotlight Banner -->
+      <div class="leetcode-spotlight glass-card reveal">
+        <div class="lc-spotlight-header">
+          <div class="lc-spotlight-icon">
+            <i class="fas fa-fire"></i>
+          </div>
+          <div class="lc-spotlight-info">
+            <div class="lc-spotlight-top">
+              <span class="lc-badge"><i class="fas fa-code"></i> Problem Solving</span>
+              <span class="lc-badge lc-badge-lang"><i class="fab fa-java"></i> Java DSA</span>
             </div>
-            <div class="lc-count">200+</div>
-            <div class="lc-label">LeetCode Problems Solved in Java</div>
-            <div class="lc-bar-wrap">
-              <div class="lc-bar" style="width: 0%" data-width="75%"></div>
-            </div>
+            <h3>200+ LeetCode Milestone</h3>
+            <p>Mastering algorithms, data structures, and optimal time-space complexity through consistent problem solving.</p>
+          </div>
+        </div>
+
+        <div class="lc-spotlight-stats">
+          <div class="lc-stat-card">
+            <span class="lc-stat-num">200+</span>
+            <span class="lc-stat-lbl">Problems Solved</span>
+          </div>
+          <div class="lc-stat-card">
+            <span class="lc-stat-num">Java</span>
+            <span class="lc-stat-lbl">Primary Language</span>
+          </div>
+          <div class="lc-stat-card">
+            <span class="lc-stat-num">DSA</span>
+            <span class="lc-stat-lbl">Data Structures &amp; Algorithms</span>
+          </div>
+        </div>
+
+        <div class="lc-spotlight-progress">
+          <div class="lc-prog-header">
+            <span>Milestone Progress</span>
+            <span class="lc-prog-val">200+ / 300 Target</span>
+          </div>
+          <div class="lc-bar-wrap">
+            <div class="lc-bar" style="width: 0%" data-width="70%"></div>
           </div>
         </div>
       </div>
@@ -283,7 +353,7 @@
         <h2 class="section-title">My Tech Stack</h2>
         <p class="section-subtitle">Technologies I work with to build modern web applications.</p>
       </div>
-      <div class="skills-grid">
+            <div class="skills-grid">
         <div class="skill-category glass-card reveal">
           <div class="skill-cat-header">
             <div class="skill-cat-icon"><i class="fas fa-code"></i></div>
@@ -299,26 +369,42 @@
         <div class="skill-category glass-card reveal">
           <div class="skill-cat-header">
             <div class="skill-cat-icon"><i class="fas fa-layer-group"></i></div>
-            <h3>Frameworks</h3>
+            <h3>Frontend</h3>
           </div>
           <div class="skill-tags">
             <div class="skill-tag react"><i class="fab fa-react"></i> React.js</div>
+            <div class="skill-tag"><i class="fas fa-atom"></i> Redux</div>
+            <div class="skill-tag"><i class="fab fa-bootstrap"></i> Bootstrap</div>
+            <div class="skill-tag"><i class="fas fa-wind"></i> Tailwind CSS</div>
+            <div class="skill-tag"><i class="fas fa-chart-bar"></i> Chart.js</div>
+            <div class="skill-tag"><i class="fas fa-th-large"></i> MUI</div>
+          </div>
+        </div>
+        <div class="skill-category glass-card reveal">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon"><i class="fas fa-server"></i></div>
+            <h3>Backend &amp; DB</h3>
+          </div>
+          <div class="skill-tags">
             <div class="skill-tag node"><i class="fab fa-node-js"></i> Node.js</div>
             <div class="skill-tag"><i class="fas fa-server"></i> Express.js</div>
-            <div class="skill-tag"><i class="fab fa-bootstrap"></i> Bootstrap</div>
+            <div class="skill-tag"><i class="fas fa-plug"></i> Socket.IO</div>
+            <div class="skill-tag"><i class="fas fa-leaf"></i> MongoDB</div>
+            <div class="skill-tag"><i class="fas fa-database"></i> MySQL</div>
           </div>
         </div>
         <div class="skill-category glass-card reveal">
           <div class="skill-cat-header">
             <div class="skill-cat-icon"><i class="fas fa-tools"></i></div>
-            <h3>Tools & Tech</h3>
+            <h3>Tools</h3>
           </div>
           <div class="skill-tags">
             <div class="skill-tag"><i class="fab fa-git-alt"></i> Git</div>
-            <div class="skill-tag"><i class="fas fa-leaf"></i> MongoDB</div>
+            <div class="skill-tag"><i class="fab fa-github"></i> GitHub</div>
             <div class="skill-tag"><i class="fas fa-vial"></i> Postman</div>
-            <div class="skill-tag"><i class="fas fa-brain"></i> ChatGPT</div>
+            <div class="skill-tag"><i class="fab fa-figma"></i> Figma</div>
             <div class="skill-tag"><i class="fas fa-book"></i> Jupyter</div>
+            <div class="skill-tag"><i class="fas fa-code"></i> VS Code</div>
           </div>
         </div>
         <div class="skill-category glass-card reveal">
@@ -329,12 +415,15 @@
           <div class="skill-tags">
             <div class="skill-tag"><i class="fas fa-shield-alt"></i> JWT Auth</div>
             <div class="skill-tag"><i class="fas fa-exchange-alt"></i> REST API</div>
-            <div class="skill-tag"><i class="fas fa-robot"></i> Model Deploy</div>
-            <div class="skill-tag"><i class="fas fa-mobile-alt"></i> Responsive</div>
+            <div class="skill-tag"><i class="fas fa-users"></i> Agile / Scrum</div>
+            <div class="skill-tag"><i class="fas fa-infinity"></i> CI/CD Basics</div>
+            <div class="skill-tag"><i class="fas fa-check-circle"></i> Unit Testing</div>
+            <div class="skill-tag"><i class="fas fa-mobile-alt"></i> Responsive Design</div>
+            <div class="skill-tag"><i class="fas fa-file-pdf"></i> jsPDF / FileSaver</div>
+            <div class="skill-tag"><i class="fas fa-robot"></i> Model Deployment</div>
           </div>
         </div>
       </div>
-
       <!-- Tech Progress Bars -->
       <div class="tech-bars-wrap reveal">
         <h3 class="tech-bars-title">Proficiency</h3>
@@ -397,74 +486,7 @@
         <h2 class="section-title">Featured Projects</h2>
         <p class="section-subtitle">Real-world applications built with modern technologies.</p>
       </div>
-      <div class="projects-grid">
-
-        <!-- EventHub -->
-        <div class="project-card glass-card reveal" data-project="eventhub">
-          <div class="project-header">
-            <div class="project-icon-wrap" style="--clr:#6366f1">
-              <i class="fas fa-calendar-check"></i>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/SACHIN-P45/EventHub" target="_blank" class="proj-link" title="GitHub">
-                <i class="fab fa-github"></i>
-              </a>
-            </div>
-          </div>
-          <h3 class="proj-title">EventHub</h3>
-          <p class="proj-desc">A full-stack college event management platform with role-based access, real-time chat,
-            QR-code ticketing, and admin analytics dashboard.</p>
-          <ul class="proj-features">
-            <li><i class="fas fa-check-circle"></i> Role-based access control</li>
-            <li><i class="fas fa-check-circle"></i> Real-time chat via Socket.IO</li>
-            <li><i class="fas fa-check-circle"></i> QR-code ticketing system</li>
-            <li><i class="fas fa-check-circle"></i> JWT Auth & email notifications</li>
-          </ul>
-          <div class="proj-stack">
-            <span class="stack-tag">MongoDB</span>
-            <span class="stack-tag">Express</span>
-            <span class="stack-tag">React</span>
-            <span class="stack-tag">Node</span>
-            <span class="stack-tag">Redux</span>
-            <span class="stack-tag">Socket.IO</span>
-            <span class="stack-tag">Tailwind</span>
-            <span class="stack-tag">MUI</span>
-          </div>
-          <div class="proj-year">2025</div>
-        </div>
-
-        <!-- Complaint Management System -->
-        <div class="project-card glass-card reveal" data-project="cms">
-          <div class="project-header">
-            <div class="project-icon-wrap" style="--clr:#3b82f6">
-              <i class="fas fa-headset"></i>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/SACHIN-P45/Compilant_Management_System_Springboot" target="_blank"
-                class="proj-link" title="GitHub">
-                <i class="fab fa-github"></i>
-              </a>
-            </div>
-          </div>
-          <h3 class="proj-title">Complaint Management System</h3>
-          <p class="proj-desc">A comprehensive full-stack complaint management system featuring real-time tracking, an
-            admin dashboard, OAuth2 integration, and automated Discord notifications.</p>
-          <ul class="proj-features">
-            <li><i class="fas fa-check-circle"></i> Student complaint tracking</li>
-            <li><i class="fas fa-check-circle"></i> Admin dashboard for management</li>
-            <li><i class="fas fa-check-circle"></i> Automated Discord notifications</li>
-            <li><i class="fas fa-check-circle"></i> Spring Security & OAuth2 Auth</li>
-          </ul>
-          <div class="proj-stack">
-            <span class="stack-tag">React</span>
-            <span class="stack-tag">Spring Boot</span>
-            <span class="stack-tag">MongoDB</span>
-            <span class="stack-tag">Java</span>
-            <span class="stack-tag">Discord JDA</span>
-            <span class="stack-tag">Tailwind</span>
-          </div>
-          <div class="proj-year">2025</div>
-        </div>
+            <div class="projects-grid">
 
         <!-- Internship Placement Portal -->
         <div class="project-card glass-card reveal" data-project="internship-portal">
@@ -481,21 +503,91 @@
               </a>
             </div>
           </div>
-          <h3 class="proj-title">Internship Placement Portal</h3>
-          <p class="proj-desc">A comprehensive platform for managing internship applications, connecting students with opportunities, and providing analytics for placement heads with a premium glassmorphic UI.</p>
+          <h3 class="proj-title">Internship &amp; Job Placement Portal</h3>
+          <p class="proj-desc">MERN-based web portal to manage internships, job opportunities, and student placement activities. Admin dashboard with JWT auth to manage postings, stats, selected students, and salary details.</p>
           <ul class="proj-features">
-            <li><i class="fas fa-check-circle"></i> Placement Head & Student Dashboards</li>
-            <li><i class="fas fa-check-circle"></i> Internship application tracking</li>
-            <li><i class="fas fa-check-circle"></i> Premium glassmorphic design</li>
-            <li><i class="fas fa-check-circle"></i> OAuth login & profile management</li>
+            <li><i class="fas fa-check-circle"></i> Student registration &amp; resume upload</li>
+            <li><i class="fas fa-check-circle"></i> Job application &amp; tracking system</li>
+            <li><i class="fas fa-check-circle"></i> Admin dashboard with analytics</li>
+            <li><i class="fas fa-check-circle"></i> JWT authentication &amp; placement stats</li>
           </ul>
           <div class="proj-stack">
             <span class="stack-tag">MongoDB</span>
             <span class="stack-tag">Express</span>
             <span class="stack-tag">React</span>
             <span class="stack-tag">Node</span>
+            <span class="stack-tag">JWT</span>
+            <span class="stack-tag">Tailwind</span>
+            <span class="stack-tag">Chart.js</span>
+            <span class="stack-tag">jsPDF</span>
           </div>
-          <div class="proj-year">2026</div>
+        </div>
+
+        <!-- CIA Exam Mark Analyzer -->
+        <div class="project-card glass-card reveal" data-project="cia-analyzer">
+          <div class="project-header">
+            <div class="project-icon-wrap" style="--clr:#f59e0b">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/SACHIN-P45" target="_blank" class="proj-link" title="GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+          </div>
+          <h3 class="proj-title">CIA Exam Mark Analyzer</h3>
+          <p class="proj-desc">Full-featured academic dashboard for managing student performance, absenteeism, and reports. Faculty can analyze CIA results, generate student reports, and manage subject-staff mappings with real-time data visualization.</p>
+          <ul class="proj-features">
+            <li><i class="fas fa-check-circle"></i> Real-time CIA result visualization</li>
+            <li><i class="fas fa-check-circle"></i> Absenteeism tracking &amp; analytics</li>
+            <li><i class="fas fa-check-circle"></i> PDF report generation</li>
+            <li><i class="fas fa-check-circle"></i> Subject-staff mapping management</li>
+          </ul>
+          <div class="proj-stack">
+            <span class="stack-tag">MongoDB</span>
+            <span class="stack-tag">Express</span>
+            <span class="stack-tag">React</span>
+            <span class="stack-tag">Node</span>
+            <span class="stack-tag">Chart.js</span>
+            <span class="stack-tag">Tailwind</span>
+            <span class="stack-tag">Bootstrap</span>
+            <span class="stack-tag">jsPDF</span>
+            <span class="stack-tag">FileSaver.js</span>
+          </div>
+        </div>
+
+        <!-- Project Bridge -->
+        <div class="project-card glass-card reveal" data-project="project-bridge">
+          <div class="project-header">
+            <div class="project-icon-wrap" style="--clr:#6366f1">
+              <i class="fas fa-handshake"></i>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/SACHIN-P45" target="_blank" class="proj-link" title="GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="https://project-bridge-tan.vercel.app" target="_blank" class="proj-link" title="Live Demo">
+                <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
+          <h3 class="proj-title">Project Bridge</h3>
+          <p class="proj-desc">Web application connecting students with project developers for academic and final-year projects. Features role-based dashboards, project browsing, requirement submission, developer communication, and secure authentication.</p>
+          <ul class="proj-features">
+            <li><i class="fas fa-check-circle"></i> Role-based dashboards (Student / Developer / Admin)</li>
+            <li><i class="fas fa-check-circle"></i> Project browsing &amp; requirement submission</li>
+            <li><i class="fas fa-check-circle"></i> Developer communication tools</li>
+            <li><i class="fas fa-check-circle"></i> Secure JWT authentication</li>
+          </ul>
+          <div class="proj-stack">
+            <span class="stack-tag">MongoDB</span>
+            <span class="stack-tag">Express</span>
+            <span class="stack-tag">React</span>
+            <span class="stack-tag">Node</span>
+            <span class="stack-tag">Redux</span>
+            <span class="stack-tag">Bootstrap</span>
+            <span class="stack-tag">Tailwind CSS</span>
+          </div>
         </div>
 
       </div>
@@ -510,7 +602,26 @@
         <h2 class="section-title">Work Experience</h2>
         <p class="section-subtitle">Professional journey and hands-on contributions.</p>
       </div>
-      <div class="exp-timeline">
+            <div class="exp-timeline">
+        <div class="exp-card glass-card reveal">
+          <div class="exp-header">
+            <div class="exp-company-logo">
+              <i class="fas fa-laptop-code"></i>
+            </div>
+            <div class="exp-info">
+              <h3>Web Developer Intern</h3>
+              <p class="exp-company">Muthayammal Engineering College</p>
+            </div>
+            <span class="exp-badge">Internship</span>
+          </div>
+          <div class="exp-body">
+            <ul class="exp-points">
+              <li><i class="fas fa-arrow-right"></i>Developed and deployed responsive web applications using React.js, Node.js, and MongoDB (MERN stack).</li>
+              <li><i class="fas fa-arrow-right"></i>Designed and implemented RESTful APIs with JWT authentication to ensure secure user access.</li>
+              <li><i class="fas fa-arrow-right"></i>Built user-friendly interfaces and optimized performance using Bootstrap, Tailwind CSS, and debugging techniques.</li>
+            </ul>
+          </div>
+        </div>
         <div class="exp-card glass-card reveal">
           <div class="exp-header">
             <div class="exp-company-logo">
@@ -519,21 +630,144 @@
             <div class="exp-info">
               <h3>ServiceNow Virtual Intern</h3>
               <p class="exp-company">ServiceNow</p>
-              <span class="exp-date"><i class="fas fa-calendar"></i> June 2025 – July 2025</span>
             </div>
             <span class="exp-badge">Internship</span>
           </div>
           <div class="exp-body">
             <ul class="exp-points">
-              <li><i class="fas fa-arrow-right"></i>Gained hands-on experience with the ServiceNow platform including
-                Incident Management, Change Management, and Service Catalog.</li>
-              <li><i class="fas fa-arrow-right"></i>Customized workflows using ServiceNow Studio and Flow Designer for
-                real-time ITSM environments.</li>
-              <li><i class="fas fa-arrow-right"></i>Created and managed forms, tables, and business rules in a live IT
-                service environment.</li>
-              <li><i class="fas fa-arrow-right"></i>Automated IT service processes to improve request handling
-                efficiency.</li>
+              <li><i class="fas fa-arrow-right"></i>Gained hands-on experience with the ServiceNow platform including Incident Management, Change Management, and Service Catalog.</li>
+              <li><i class="fas fa-arrow-right"></i>Created and managed forms, tables, and business rules in a real-time ITSM environment.</li>
+              <li><i class="fas fa-arrow-right"></i>Collaborated with the team to automate IT service processes and improve request handling.</li>
             </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Hackathon Section -->
+  <section class="section" id="hackathon">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Hackathon</span>
+        <h2 class="section-title">Competition Highlights</h2>
+        <p class="section-subtitle">Building impactful solutions under pressure.</p>
+      </div>
+      <div class="exp-timeline">
+        <div class="exp-card glass-card reveal">
+          <div class="exp-header">
+            <div class="exp-company-logo" style="background: linear-gradient(135deg,#f59e0b,#d97706)">
+              <i class="fas fa-trophy"></i>
+            </div>
+            <div class="exp-info">
+              <h3>Smart India Hackathon (SIH)</h3>
+              <p class="exp-company">Blockchain-Based Certificate Verification System</p>
+            </div>
+            <span class="exp-badge" style="background:rgba(245,158,11,0.15);color:#f59e0b;border-color:rgba(245,158,11,0.3)">Hackathon</span>
+          </div>
+          <div class="exp-body">
+            <ul class="exp-points">
+              <li><i class="fas fa-arrow-right"></i>Designed a secure blockchain-based certificate verification platform.</li>
+              <li><i class="fas fa-arrow-right"></i>Focused on fraud prevention, decentralized verification, and certificate authentication.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Resume Section -->
+  <section class="section section-dark" id="resume">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Resume</span>
+        <h2 class="section-title">My Resume</h2>
+        <p class="section-subtitle">View or download my latest resume to know more about my skills and experience.</p>
+      </div>
+      <div class="resume-wrapper reveal">
+        <!-- Resume Preview Card -->
+        <div class="resume-preview-card glass-card">
+          <div class="resume-preview-header">
+            <div class="resume-preview-icon">
+              <i class="fas fa-file-pdf"></i>
+            </div>
+            <div class="resume-preview-info">
+              <h3>Sachin P – Full-Stack Developer</h3>
+              <p>MERN Stack · React · Node.js · MongoDB · Salem, India</p>
+              <div class="resume-tags">
+                <span class="resume-tag"><i class="fas fa-graduation-cap"></i> B.E. CSE (Cyber Security)</span>
+                <span class="resume-tag"><i class="fas fa-star"></i> CGPA 8.54</span>
+                <span class="resume-tag"><i class="fas fa-code"></i> 200+ LeetCode</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Highlights Strip -->
+          <div class="resume-highlights">
+            <div class="resume-highlight-item">
+              <i class="fas fa-briefcase"></i>
+              <span>2 Internships</span>
+            </div>
+            <div class="resume-highlight-item">
+              <i class="fas fa-project-diagram"></i>
+              <span>3 Projects</span>
+            </div>
+            <div class="resume-highlight-item">
+              <i class="fas fa-trophy"></i>
+              <span>SIH Participant</span>
+            </div>
+            <div class="resume-highlight-item">
+              <i class="fas fa-award"></i>
+              <span>4 Certifications</span>
+            </div>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="resume-actions">
+            <a href="Sachin_P_Resume.pdf" target="_blank" class="btn btn-primary resume-btn">
+              <i class="fas fa-eye"></i>
+              View Resume
+            </a>
+            <a href="Sachin_P_Resume.pdf" download="Sachin_P_Resume.pdf" class="btn btn-ghost resume-btn">
+              <i class="fas fa-download"></i>
+              Download PDF
+            </a>
+          </div>
+
+          <p class="resume-note"><span class="resume-live-dot"></span> Last updated: November 2026 · Verified Copy</p>
+        </div>
+
+        <!-- Quick Skills Snapshot -->
+        <div class="resume-skills-snap glass-card">
+          <h4 class="snap-title"><i class="fas fa-bolt"></i> Quick Snapshot</h4>
+          <div class="snap-grid">
+            <div class="snap-item">
+              <span class="snap-label">Languages</span>
+              <span class="snap-val">JavaScript, Java, Python, C</span>
+            </div>
+            <div class="snap-item">
+              <span class="snap-label">Frontend</span>
+              <span class="snap-val">React.js, Redux, Tailwind, Bootstrap, MUI, Chart.js</span>
+            </div>
+            <div class="snap-item">
+              <span class="snap-label">Backend</span>
+              <span class="snap-val">Node.js, Express.js, REST APIs, JWT, Socket.IO</span>
+            </div>
+            <div class="snap-item">
+              <span class="snap-label">Database</span>
+              <span class="snap-val">MongoDB, Mongoose, MySQL</span>
+            </div>
+            <div class="snap-item">
+              <span class="snap-label">Tools</span>
+              <span class="snap-val">Git, GitHub, Postman, Figma, VS Code, Jupyter</span>
+            </div>
+            <div class="snap-item">
+              <span class="snap-label">Certifications</span>
+              <span class="snap-val">3x NPTEL Elite (Distributed Systems, Edge Computing, Privacy & Security) · TCS iON</span>
+            </div>
+            <div class="snap-item">
+              <span class="snap-label">Others</span>
+              <span class="snap-val">Agile/Scrum, CI/CD Basics, Unit Testing, jsPDF, FileSaver.js</span>
+            </div>
           </div>
         </div>
       </div>
@@ -546,21 +780,42 @@
       <div class="section-header">
         <span class="section-tag">Contact</span>
         <h2 class="section-title">Let's Connect</h2>
-        <p class="section-subtitle">Open to internships, collaborations, and exciting opportunities.</p>
+        <p class="section-subtitle">Open to internships, full-time roles, and exciting collaborations.</p>
       </div>
       <div class="contact-grid">
         <div class="contact-info reveal">
+          <div class="contact-status-pill">
+            <span class="status-dot-pulse"></span>
+            <span>Available for Opportunities · Fast Response</span>
+          </div>
+
           <h3>Get In Touch</h3>
-          <p>I'm currently looking for internship opportunities. Whether you have a question or just want to say hi, my
-            inbox is always open!</p>
+          <p>I'm currently seeking internship &amp; full-stack opportunities. Whether you have an open role, project idea, or just want to chat tech, let's connect:</p>
+
           <div class="contact-links">
-            <a href="mailto:sachinabi67@gmail.com" class="contact-link">
-              <div class="clink-icon"><i class="fas fa-envelope"></i></div>
+            <div class="contact-link-row">
+              <a href="mailto:sachinabi67@gmail.com" class="contact-link">
+                <div class="clink-icon"><i class="fas fa-envelope"></i></div>
+                <div>
+                  <span class="clink-label">Email</span>
+                  <span class="clink-val">sachinabi67@gmail.com</span>
+                </div>
+              </a>
+              <button type="button" class="clink-copy-btn" id="copyEmailBtn" title="Copy Email" aria-label="Copy Email">
+                <i class="fas fa-copy"></i>
+                <span class="copy-tooltip" id="copyTooltip">Copy</span>
+              </button>
+            </div>
+
+            <a href="https://wa.me/919342423515?text=Hi%20Sachin,%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20connect!" target="_blank" class="contact-link whatsapp-link" rel="noopener noreferrer">
+              <div class="clink-icon wa-icon"><i class="fab fa-whatsapp"></i></div>
               <div>
-                <span class="clink-label">Email</span>
-                <span class="clink-val">sachinabi67@gmail.com</span>
+                <span class="clink-label">WhatsApp · Direct Chat</span>
+                <span class="clink-val">+91 93424 23515</span>
               </div>
+              <span class="clink-badge">Instant</span>
             </a>
+
             <a href="tel:+919342423515" class="contact-link">
               <div class="clink-icon"><i class="fas fa-phone"></i></div>
               <div>
@@ -568,14 +823,16 @@
                 <span class="clink-val">+91 93424 23515</span>
               </div>
             </a>
-            <a href="https://www.linkedin.com/in/sachin-p-1787242a5" target="_blank" class="contact-link">
+
+            <a href="https://www.linkedin.com/in/sachin-p-1787242a5" target="_blank" class="contact-link" rel="noopener noreferrer">
               <div class="clink-icon"><i class="fab fa-linkedin"></i></div>
               <div>
                 <span class="clink-label">LinkedIn</span>
                 <span class="clink-val">sachin-p-1787242a5</span>
               </div>
             </a>
-            <a href="https://github.com/SACHIN-P45" target="_blank" class="contact-link">
+
+            <a href="https://github.com/SACHIN-P45" target="_blank" class="contact-link" rel="noopener noreferrer">
               <div class="clink-icon"><i class="fab fa-github"></i></div>
               <div>
                 <span class="clink-label">GitHub</span>
@@ -584,29 +841,76 @@
             </a>
           </div>
         </div>
+
         <div class="contact-form-wrap reveal">
+          <!-- Main Interactive Form -->
           <form class="contact-form glass-card" id="contactForm">
-            <div class="form-group">
-              <label for="contactName">Your Name</label>
-              <input type="text" id="contactName" name="name" placeholder="John Doe" required />
+            <!-- Hidden fields for EmailJS template variable synonyms -->
+            <input type="hidden" name="from_name" id="hiddenFromName" />
+            <input type="hidden" name="from_email" id="hiddenFromEmail" />
+            <input type="hidden" name="reply_to" id="hiddenReplyTo" />
+            <input type="hidden" name="subject" id="hiddenSubject" />
+
+            <!-- Topic Selector Chips -->
+            <div class="topic-picker">
+              <span class="topic-label"><i class="fas fa-tag"></i> I'm interested in:</span>
+              <div class="topic-chips" id="topicChips">
+                <button type="button" class="topic-chip active" data-subject="Internship Opportunity for Sachin">
+                  <i class="fas fa-briefcase"></i> Internship
+                </button>
+                <button type="button" class="topic-chip" data-subject="Full-Stack Developer Role Inquiry">
+                  <i class="fas fa-laptop-code"></i> Full-Time Role
+                </button>
+                <button type="button" class="topic-chip" data-subject="Project Collaboration with Sachin">
+                  <i class="fas fa-rocket"></i> Collaboration
+                </button>
+                <button type="button" class="topic-chip" data-subject="General Tech Chat for Sachin">
+                  <i class="fas fa-coffee"></i> Quick Chat
+                </button>
+              </div>
             </div>
-            <div class="form-group">
-              <label for="contactEmail">Your Email</label>
-              <input type="email" id="contactEmail" name="email" placeholder="john@example.com" required />
+
+            <div class="form-row-2">
+              <div class="form-group">
+                <label for="contactName">Your Name <span class="req">*</span></label>
+                <div class="input-wrap">
+                  <i class="fas fa-user input-icon"></i>
+                  <input type="text" id="contactName" name="name" placeholder="John Doe" required />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="contactEmail">Your Email <span class="req">*</span></label>
+                <div class="input-wrap">
+                  <i class="fas fa-envelope input-icon"></i>
+                  <input type="email" id="contactEmail" name="email" placeholder="john@example.com" required />
+                </div>
+              </div>
             </div>
+
             <div class="form-group">
-              <label for="contactSubject">Subject</label>
-              <input type="text" id="contactSubject" name="title" placeholder="Internship Opportunity" required />
+              <label for="contactSubject">Subject <span class="req">*</span></label>
+              <div class="input-wrap">
+                <i class="fas fa-heading input-icon"></i>
+                <input type="text" id="contactSubject" name="title" value="Internship Opportunity for Sachin" placeholder="Subject" required />
+              </div>
             </div>
+
             <div class="form-group">
-              <label for="contactMessage">Message</label>
-              <textarea id="contactMessage" name="message" rows="5" placeholder="Tell me about the opportunity..."
-                required></textarea>
+              <label for="contactMessage">Message <span class="req">*</span></label>
+              <div class="input-wrap textarea-wrap">
+                <i class="fas fa-comment-dots input-icon"></i>
+                <textarea id="contactMessage" name="message" rows="5" placeholder="Hi Sachin, I'd like to discuss an opportunity..." required></textarea>
+              </div>
             </div>
-            <button type="submit" class="btn btn-primary btn-full">
+
+            <button type="submit" class="btn btn-primary btn-full contact-submit-btn" id="contactSubmitBtn">
               <i class="fas fa-paper-plane"></i> Send Message
             </button>
           </form>
+
+          <!-- In-Card Status Card (Success & Instant Delivery Hub) -->
+          <div class="contact-status-card glass-card" id="contactStatusCard" style="display: none;"></div>
         </div>
       </div>
     </div>
@@ -639,7 +943,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p>© 2025 Sachin P. Crafted with <i class="fas fa-heart" style="color:#f43f5e"></i> & passion.</p>
+        <p>© 2026 Sachin P. Crafted with <i class="fas fa-heart" style="color:#f43f5e"></i> & passion.</p>
       </div>
     </div>
   </footer>
@@ -655,12 +959,8 @@
     <span id="toastMsg">Message sent successfully!</span>
   </div>
 
-  <!-- EmailJS Init -->
-  <script type="text/javascript">
-    (function () {
-      emailjs.init('Hc3qm5pkpS9zH-iI-'); // ✅ Public Key
-    })();
-  </script>
+  <!-- EmailJS SDK & Main Script -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script src="script.js"></script>
 </body>
 
